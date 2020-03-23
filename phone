@@ -1,0 +1,10 @@
+#!/bin/bash
+#validation of phone number
+
+
+gawk --re-interval '/^[7-9]{1}[0-9]{9}/ {print $0}' phone.txt >>matched.txt
+
+#the phone number in which the first digit is between 7 and 9 and if there is ten digits in total then that phone number is valid and it is written to the file named matched.txt 
+
+
+
