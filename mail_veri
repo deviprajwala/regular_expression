@@ -1,0 +1,10 @@
+#!/bin/bash
+#script to validate an email address
+
+gawk --re-interval '/^([A-Za-z0-9_\-\.\+]+)@(gmail|outlook|webmail|yahoo)\.(com|in)/' mail.txt>>veri.txt
+
+#^([a-zA-Z0-9_\-\.\+]+) pattern to match the username which can contain alphabets in both uppercase and lowercase ,digits,underscore,hyphen,dot or plus character
+
+#(gmail|outlook|webmail|yahoo)\.(com|in) pattern to match the host name
+
+#required pattern is username@hostname
